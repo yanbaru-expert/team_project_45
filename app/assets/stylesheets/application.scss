@@ -23,3 +23,12 @@
 .mw-xl {
   max-width: 1200px;
 }
+
+//フラッシュの背景色
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
