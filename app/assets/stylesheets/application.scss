@@ -3,6 +3,8 @@
  *= require_self
  */
 
+@import "bootstrap/scss/bootstrap";
+
  /* 全体 */
 .base-container {
   margin: 0 auto;
@@ -21,4 +23,3 @@
 .mw-xl {
   max-width: 1200px;
 }
-
