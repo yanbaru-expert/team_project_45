@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 2021_03_10_012212) do
   end
 
   create_table "texts", force: :cascade do |t|
-    t.integer "genre"
-    t.string "title"
-    t.text "content"
+    t.integer "genre", default: 0, null: false
+    t.string "title", null: false
+    t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

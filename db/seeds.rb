@@ -19,3 +19,14 @@ CSV.foreach('db/csv_data/movie_data.csv', headers: true) do |row|
   )
 end
 puts "動画の初期データインポートに成功しました。"
+
+# テキスト教材のcsvインポート
+Text.destroy_all
+CSV.foreach('db/csv_data/text_data.csv', headers: true) do |row|
+  Text.create(
+    genre: row["genre"].to_i,
+    title: row["title"],
+    url: row["content"]
+  )
+end
+puts "テキストの初期データインポートに成功しました。"
