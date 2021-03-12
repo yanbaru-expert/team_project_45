@@ -32,3 +32,17 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+// ナビバーの配置調整
+header {
+  margin-bottom: 100px;
+}
+
+ul {
+  font-size: 13px;
+}
+
+.navbar-brand {
+  padding-left: 130px;
+  padding-right: 100px;
+}
