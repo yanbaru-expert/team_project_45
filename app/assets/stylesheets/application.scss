@@ -35,14 +35,15 @@
 
 // ナビバーの配置調整
 header {
-  margin-bottom: 100px;
+  height: 57px;
+  background-color: #007bff;
 }
 
 ul {
   font-size: 13px;
 }
 
-.navbar-brand {
-  padding-left: 130px;
-  padding-right: 100px;
+.navbar {
+  margin: 0 auto;
+  width: 1000px;
 }
