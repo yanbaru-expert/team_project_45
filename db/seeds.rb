@@ -1,4 +1,4 @@
-require "csv"
+require 'csv'
 
 EMAIL = 'test@example.com'
 PASSWORD = 'password'
@@ -13,20 +13,20 @@ end
 Movie.destroy_all
 CSV.foreach('db/csv_data/movie_data.csv', headers: true) do |row|
   Movie.create(
-    genre: row["genre"].to_i,
-    title: row["title"],
-    url: row["url"]
+    genre: row['genre'].to_i,
+    title: row['title'],
+    url: row['url']
   )
 end
-puts "動画の初期データインポートに成功しました。"
+puts '動画の初期データインポートに成功しました。'
 
 # テキスト教材のcsvインポート
 Text.destroy_all
 CSV.foreach('db/csv_data/text_data.csv', headers: true) do |row|
   Text.create(
-    genre: row["genre"].to_i,
-    title: row["title"],
-    url: row["content"]
+    genre: row['genre'].to_i,
+    title: row['title'],
+    content: row['content']
   )
 end
-puts "テキストの初期データインポートに成功しました。"
+puts 'テキストの初期データインポートに成功しました。'
