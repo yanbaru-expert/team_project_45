@@ -39,11 +39,11 @@ header {
   background-color: #007bff;
 }
 
-ul {
+.navbar-nav {
   font-size: 13px;
 }
 
 .navbar {
   margin: 0 auto;
-  width: 960px;
+  max-width: 950px;
 }
