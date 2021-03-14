@@ -32,3 +32,18 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+// ナビバーの配置調整
+header {
+  height: 57px;
+  background-color: #007bff;
+}
+
+.navbar-nav {
+  font-size: 13px;
+}
+
+.navbar {
+  margin: 0 auto;
+  max-width: 950px;
+}
