@@ -15,6 +15,9 @@ gem 'webpacker', '~> 5.0'
 # ログイン機能
 gem 'devise'
 
+# 管理者画面
+gem 'activeadmin'
+
 # DeviseにBootstrapのスタイルを適用させる
 gem 'devise-bootstrap-views', '~> 1.0'
 

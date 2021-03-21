@@ -30,3 +30,9 @@ CSV.foreach('db/csv_data/text_data.csv', headers: true) do |row|
   )
 end
 puts 'テキストの初期データインポートに成功しました。'
+
+# 管理者が存在しないときだけ作成
+AdminUser.find_or_create_by!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') do |admin_user|
+  admin_user.password = PASSWORD
+  puts '管理者の初期データインポートに成功しました。'
+end
