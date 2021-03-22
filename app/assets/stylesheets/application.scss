@@ -34,11 +34,6 @@
 }
 
 // ナビバーの配置調整
-header {
-  height: 57px;
-  background-color: #007bff;
-}
-
 .navbar-nav {
   font-size: 13px;
 }
@@ -46,6 +41,10 @@ header {
 .navbar {
   margin: 0 auto;
   max-width: 950px;
+}
+
+body {
+  padding-top: 50px;
 }
 
 // devise関連ページの配置調節
