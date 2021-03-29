@@ -1,0 +1,18 @@
+// テキスト教材一覧ページ
+
+.text-container {
+  .card-box {
+    margin-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 400px;
+  }
+
+  .card {
+    height: 350px;
+  }
+
+  .text-card-img {
+    max-width: 100%;
+  }
+}
