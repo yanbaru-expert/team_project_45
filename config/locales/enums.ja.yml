@@ -1,0 +1,20 @@
+ja:
+  enums:
+    text:
+      genre:
+        invisible: "Invisible"
+        basic: "Basic"
+        git: "Git"
+        ruby: "Ruby"
+        rails: "Ruby on Rails"
+        php: "PHP"
+        html: "HTML"
+        javascript: "JavaScript"
+        typescript: "TypeScript"
+        react: "React"
+        vue: "Vue"
+        angular: "Angular"
+        aws: "AWS"
+        money: "マネタイズ"
+        talk: "対談"
+        live: "勉強会"

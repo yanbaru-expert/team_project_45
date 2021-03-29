@@ -7,7 +7,7 @@ class Movie < ApplicationRecord
     ruby: 3,
     rails: 4,
     php: 5,
-    htmml: 6,
+    html: 6,
     javascript: 7,
     typescript: 8,
     react: 9,
