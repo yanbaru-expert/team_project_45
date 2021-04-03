@@ -7,11 +7,14 @@ module MarkdownHelper
   private
 
   def html_renderer
-    Redcarpet::Render::HTML
+      ::Coderayify.new(
+      filter_html: true,
+      hard_wrap: true,
+      link_attributes: { rel: 'nofollow', target: "_blank" }
+    )
   end
 
   def markdown_extensions
-    # 設定の詳細は https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use
     {
       autolink: true,
       space_after_headers: true,
