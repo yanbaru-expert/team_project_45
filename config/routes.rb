@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root "texts#index"
+  get '/texts/:id', to: 'texts#show'
 end

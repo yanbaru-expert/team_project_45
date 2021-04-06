@@ -40,3 +40,9 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'enum_help'
+
+# マークダウン記法の文字列をHTMLに変換
+gem 'redcarpet'
+
+# シンタックスハイライト
+gem 'coderay'
