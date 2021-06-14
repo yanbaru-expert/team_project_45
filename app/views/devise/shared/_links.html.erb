@@ -19,4 +19,7 @@
       <%= link_to t('.sign_in_with_provider', provider: OmniAuth::Utils.camelize(provider)), omniauth_authorize_path(resource_name, provider) %><br />
     <% end -%>
   <% end -%>
+  <%- unless user_signed_in? %>
+    <%= link_to "ゲストログイン(閲覧用)", users_guest_sign_in_path, method: :post, class: 'btn btn-success btn-block' %>
+  <% end -%>
 </div>
