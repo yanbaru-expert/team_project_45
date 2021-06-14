@@ -3,10 +3,8 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Ruby
@@ -56,29 +54,29 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">マネタイズ講座</a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" href="#">LINE</a>
       </li>
-
       <% if user_signed_in? %>
         <!-- ログイン時 -->
         <li class="nav-item active">
-        <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active"%>
+          <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active"%>
         </li>
         <li class="nav-item active">
-        <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
         </li>
       <% else %>
         <!-- 非ログイン時 -->
         <li class="nav-item active">
-        <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
+          <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
         </li>
         <li class="nav-item active">
-        <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "nav-item nav-link active" %>
         </li>
       <% end %>
-      
     </ul>
   </div>
 </nav>
