@@ -8,7 +8,7 @@
               <img class="text-card-img" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="デフォルト画像">
             </div>
             <object class="read-button" id="text-<%= text.id %>">
-              <%if text.clicked_read_button?(current_user) %>
+              <%if text.read %>
                 <%= render "read", text: text %>
               <% else %>
                 <%= render "unread", text: text %>

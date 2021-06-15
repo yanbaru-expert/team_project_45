@@ -1,6 +1,7 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.all
+    select_sql = "texts.*, read_progresses.user_id = #{current_user.id} AS read"
+    @texts = Text.includes(:user).left_join_read_texts(current_user.id).select(select_sql).order(:created_at)
   end
 
   def show
