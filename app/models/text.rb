@@ -1,4 +1,7 @@
 class Text < ApplicationRecord
+  belongs_to :user
+  has_many :read_progresses, dependent: :destroy
+
   validates :genre, :title, :content, presence: true
   enum genre: {
     invisible: 0,
