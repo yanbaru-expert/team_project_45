@@ -11,11 +11,13 @@
               <h5 class="card-title"><%= text.title %></h5>
               <p class="card-genre">【<%= text.genre_i18n %>】</p>
             </div>
-            <%if text.clicked_read_button?(current_user) %>
-              <%= render "read", text: text %>
-            <% else %>
-              <%= render "unread", text: text %>
-            <% end %>
+            <p id="text-<%= text.id %>">
+              <%if text.clicked_read_button?(current_user) %>
+                <%= render "read", text: text %>
+              <% else %>
+                <%= render "unread", text: text %>
+              <% end %>
+            </p>
           </div>
         <% end %>
       </div>
