@@ -21,4 +21,8 @@ class Text < ApplicationRecord
     talk: 14,
     live: 15,
   }
+
+  def clicked_read_button?(user)
+    read_progresses.exists?(user_id: user.id)
+  end
 end
