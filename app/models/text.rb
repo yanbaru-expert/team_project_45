@@ -1,4 +1,7 @@
 class Text < ApplicationRecord
+  belongs_to :user
+  has_many :read_progresses, dependent: :destroy
+
   validates :genre, :title, :content, presence: true
   enum genre: {
     invisible: 0,
@@ -18,4 +21,16 @@ class Text < ApplicationRecord
     talk: 14,
     live: 15,
   }
+
+  def clicked_read_button?(user)
+    read_progresses.exists?(user_id: user.id)
+  end
+
+  def self.left_join_read_texts(user_id)
+    join_sql = <<~SQL.squish
+      LEFT OUTER JOIN read_progresses ON read_progresses.text_id = texts.id
+                                      AND read_progresses.user_id = #{user_id}
+    SQL
+    joins(join_sql)
+  end
 end
