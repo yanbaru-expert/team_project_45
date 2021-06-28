@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "texts#index"
   get "/texts/:id", to: "texts#show"
+  get "/movies", to: "movies#index"
 
   resources :texts do
     resource :read_progresses, only: [:create, :destroy]

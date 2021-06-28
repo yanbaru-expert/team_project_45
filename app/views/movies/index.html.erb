@@ -1,2 +1,19 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<div class="text-container">
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="card-box col-12 col-md-6 col-lg-4">
+        <%= link_to "/movies/#{movie.id}" do %>
+          <div class="card border-dark mb-3">
+            <div class="bd-placeholder-img card-img-top">
+              <img class="text-card-img" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="デフォルト画像">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><%= movie.title %></h5>
+              <p class="card-genre">【<%= movie.genre_i18n %>】</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
