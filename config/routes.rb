@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "texts#index"
   get "/texts/:id", to: "texts#show"
   get "/movies", to: "movies#index"
+  get "/movies/:id", to: "movies#show"
 
   resources :texts do
     resource :read_progresses, only: [:create, :destroy]
