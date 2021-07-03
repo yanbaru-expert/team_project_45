@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    Movie::RAILS_GENRE_LIST
+    @movies = Movie.order(:id)
   end
 
   def show
