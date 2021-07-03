@@ -4,7 +4,7 @@
       <div class="YoutubeWrapper"><%= embed_youtube(movie.url) %></div>
       <object class="btn btn-primary">視聴済みボタン</object>
       <div class="card-body">
-        <h5 class="card-title"><%= movie.id %><%= movie.title %></h5>
+        <h5 class="card-title">Lv.<%= movie_counter + 1 %> : <%= movie.title %></h5>
       </div>
     </div>
   <% end %>
