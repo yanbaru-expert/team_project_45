@@ -1,18 +1,6 @@
 <h2 class="text-center">Ruby/Rails教材</h2>
 <div class="text-container">
   <div class="row">
-    <% @movies.each do |movie| %>
-      <div class="card-box col-12 col-md-6 col-lg-4">
-        <%= link_to "/movies/#{movie.id}" do %>
-          <div class="card border-dark mb-3">
-            <div class="YoutubeWrapper"><%= embed_youtube(movie.url) %></div>
-            <object class="btn btn-primary">視聴済みボタン</object>
-            <div class="card-body">
-              <h5 class="card-title"><%= movie.title %></h5>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <%= render @movies %>
   </div>
 </div>
