@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    Movie::RAILS_GENRE_LIST
-    @movies = Movie.order(:id)
+    @movies = Movie.where(genre: Movie::RAILS_GENRE_LIST)
   end
 
   def show
