@@ -12,7 +12,7 @@ end
 # 動画教材のcsvインポート
 Movie.destroy_all
 CSV.foreach("db/csv_data/movie_data.csv", headers: true) do |row|
-  Movie.create(
+  Movie.create!(
     genre: row["genre"],
     title: row["title"],
     url: row["url"],
@@ -23,7 +23,7 @@ puts "動画の初期データインポートに成功しました。"
 # テキスト教材のcsvインポート
 Text.destroy_all
 CSV.foreach("db/csv_data/text_data.csv", headers: true) do |row|
-  Text.create(
+  Text.create!(
     genre: row["genre"],
     title: row["title"],
     content: row["content"],
