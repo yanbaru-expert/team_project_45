@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+  has_many :watch_progresses, dependent: :destroy
+  
   RAILS_GENRE_LIST = %w[basic git ruby rails]
   validates :genre, :title, :url, presence: true
   enum genre: {
