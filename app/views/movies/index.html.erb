@@ -1,6 +1,6 @@
 <h2 class="text-center">Ruby/Rails教材</h2>
 <div class="movie-container">
   <div class="row">
-    <%= render @movies %>
+    <%= render partial: "movie", collection: @movies %>
   </div>
 </div>
