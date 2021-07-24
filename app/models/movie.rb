@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+  has_many :watch_progresses, dependent: :destroy
+
   RAILS_GENRE_LIST = %w[basic git ruby rails]
   validates :genre, :title, :url, presence: true
   enum genre: {
@@ -19,4 +21,9 @@ class Movie < ApplicationRecord
     talk: 14,
     live: 15,
   }
+
+  def watch_progressed_by?(user)
+    watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
+  end
+
 end

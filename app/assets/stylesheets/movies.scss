@@ -3,7 +3,7 @@
   height: 50px;
 }
 
-.text-container {
+.movie-container {
   .card-box {
     margin-bottom: 50px;
     padding-right: 15px;
@@ -11,13 +11,11 @@
     max-width: 400px;
   }
 
-  .card {
-    height: 350px;
-  }
-
   .card-title {
     font-size: 16px;
     color: black;
+    height: 70px;
+    margin-left: 20px;
   }
 
   .button_custom {

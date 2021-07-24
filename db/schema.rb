@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_062018) do
+ActiveRecord::Schema.define(version: 2021_07_18_113950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,18 @@ ActiveRecord::Schema.define(version: 2021_06_15_062018) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "watch_progresses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_watch_progresses_on_movie_id"
+    t.index ["user_id", "movie_id"], name: "index_watch_progresses_on_user_id_and_movie_id", unique: true
+    t.index ["user_id"], name: "index_watch_progresses_on_user_id"
+  end
+
   add_foreign_key "read_progresses", "texts"
   add_foreign_key "read_progresses", "users"
+  add_foreign_key "watch_progresses", "movies"
+  add_foreign_key "watch_progresses", "users"
 end
