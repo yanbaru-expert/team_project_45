@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="card-body">
-      <p id="movie-<%= movie.id %> %>">
+      <p id="movie-<%= movie.id %>">
         <% if movie.watch_progressed_by?(current_user) %>
           <%= render "watch", movie: movie %>
         <% else %>
