@@ -23,7 +23,7 @@ class Movie < ApplicationRecord
   }
 
   def watch_progressed_by?(user)
-    watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }
+    watch_progresses.exists?(user_id: user.id)
   end
 
 end
