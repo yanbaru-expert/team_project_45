@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  RAILS_GENRE_LIST = %w[basic git ruby rails php]
+  RAILS_GENRE_LIST = %w[basic git ruby rails]
   validates :genre, :title, :url, presence: true
   enum genre: {
     invisible: 0,
