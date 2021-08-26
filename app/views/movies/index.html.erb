@@ -1,4 +1,10 @@
-<h2 class="text-center">Ruby/Rails教材</h2>
+<div class="text-center">
+  <% if params[:genre] == "php" %>
+    <h1>PHP動画</h1>
+  <% else %>
+    <h1>Ruby/Rails動画</h1>
+  <% end %>
+</div>  
 <div class="movie-container">
   <div class="row">
     <%= render partial: "movie", collection: @movies %>
