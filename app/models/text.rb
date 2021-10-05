@@ -21,6 +21,17 @@ class Text < ApplicationRecord
     talk: 14,
     live: 15,
   }
+  RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+
+  PHP_GENRE_LIST = %w[php].freeze
+
+  def self.filter_by(genre)
+    if genre == "php"
+      Text.where(genre: Text::PHP_GENRE_LIST)
+    else
+      Text.where(genre: Text::RAILS_GENRE_LIST)
+    end
+  end
 
   def clicked_read_button?(user)
     read_progresses.exists?(user_id: user.id)
