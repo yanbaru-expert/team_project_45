@@ -46,3 +46,6 @@ gem 'redcarpet'
 
 # シンタックスハイライト
 gem 'coderay'
+
+# ページネーション
+gem 'kaminari'
