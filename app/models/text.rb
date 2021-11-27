@@ -1,5 +1,4 @@
 class Text < ApplicationRecord
-  belongs_to :user, optional: true
   has_many :read_progresses, dependent: :destroy
 
   validates :genre, :title, :content, presence: true
