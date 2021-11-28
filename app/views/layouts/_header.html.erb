@@ -13,9 +13,9 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to "Ruby/Railsテキスト教材", texts_path, class: "dropdown-item" %>
           <%= link_to "Ruby/Rails動画教材", movies_path, class: "dropdown-item" %>
-          <a class="dropdown-item" href="#">AWSテキスト教材</a>
+          <!--<a class="dropdown-item" href="#">AWSテキスト教材</a>
           <a class="dropdown-item" href="#">よくある質問集</a>
-          <a class="dropdown-item" href="#">チャレンジ問題集</a>
+          <a class="dropdown-item" href="#">チャレンジ問題集</a> -->
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -28,25 +28,21 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          フロント
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">HTML&CSS</a>
+        <a class="nav-link disabled" href="#">フロント</a>
+        <div class="dropdown-menu">
+          <!--<a class="dropdown-item" href="#">HTML&CSS</a>
           <a class="dropdown-item" href="#">JavaScript</a>
           <a class="dropdown-item" href="#">TypeScript</a>
           <a class="dropdown-item" href="#">Angular</a>
-          <a class="dropdown-item" href="#">Vue</a>
+          <a class="dropdown-item" href="#">Vue</a>-->
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          デザイン講座
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">デザインツールの使い方</a>
+        <a class="nav-link disabled" href="#">デザイン講座</a>
+        <div class="dropdown-menu">
+          <!--<a class="dropdown-item" href="#">デザインツールの使い方</a>
           <a class="dropdown-item" href="#">実案件の取り方</a>
-          <a class="dropdown-item" href="#">デザイナーのマーケティング戦略</a>
+          <a class="dropdown-item" href="#">デザイナーのマーケティング戦略</a>-->
         </div>
       </li>
       <li class="nav-item">
@@ -56,7 +52,7 @@
         <a class="nav-link disabled" href="#">マネタイズ講座</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">LINE</a>
+        <a class="nav-link disabled" href="#">LINE</a>
       </li>
       <% if user_signed_in? %>
         <!-- ログイン時 -->
