@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="bg-primary fixed-top">
+      <%= render "layouts/header" %>
+    </header>
+    <main>
+      <%# max_width メソッドは application_helper.rb に記載 %>
+      <div class="base-container <%= max_width %>">
+        <%= render "layouts/flash" %>
+        <div class="container-fluid py-4 <%= devise_controller? ? 'mw-md' : 'mw-xl' %>">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+    </footer>
   </body>
 </html>

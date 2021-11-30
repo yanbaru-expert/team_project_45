@@ -1,0 +1,27 @@
+
+.text-center {
+  height: 50px;
+}
+
+.movie-container {
+  .card-box {
+    margin-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 400px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    color: black;
+    height: 70px;
+    margin-left: 20px;
+  }
+
+  .button_custom {
+    margin: 15px 0px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,33 @@
+ja:
+  enums:
+    text:
+      genre:
+        invisible: "Invisible"
+        basic: "Basic"
+        git: "Git"
+        ruby: "Ruby"
+        rails: "Ruby on Rails"
+        php: "PHP"
+        html: "HTML"
+        javascript: "JavaScript"
+        typescript: "TypeScript"
+        react: "React"
+        vue: "Vue"
+        angular: "Angular"
+        aws: "AWS"
+        money: "マネタイズ"
+        talk: "対談"
+        live: "勉強会"
+  activerecord:
+    models:
+      text: テキスト教材
+      movie: 動画教材
+      read_progress: 読破済み
+      watch_progress: 視聴済み
+    attributes:
+      read_progress:
+        user: ユーザー
+        text: テキスト教材
+      watch_progress:
+        user: ユーザー
+        movie: 動画教材
