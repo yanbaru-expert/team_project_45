@@ -73,4 +73,9 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # 開発環境でメールを送るためのホストの設定（Railsチュートリアル11章）
+  # users/password/new画面で「パスワードの再設定方法を送信する」を押下した際にエラーにならないよう設定。ただしエラーにならないだけで送信はできない。
+  # host = 'localhost:3000'
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 end
